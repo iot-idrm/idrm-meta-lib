@@ -1,0 +1,28 @@
+{
+  "title": "Humidity",
+  "definitions": {
+    "rt": "oic.r.humidity",
+    "type": "object",
+    "properties": [
+      {
+        "name": "humidity",
+        "type": "float",
+        "readOnly": true,
+        "description": "Current sensed value for Humidity",
+        "minimum": 0,
+        "maximum": 100
+      },
+      {
+        "name": "desiredHumidity",
+        "type": "float",
+        "description": "Desired value for Humidity",
+        "minimum": 0,
+        "maximum": 100
+      }
+    ]
+  },
+  "type": "object",
+  "required": [
+    "humidity"
+  ]
+}

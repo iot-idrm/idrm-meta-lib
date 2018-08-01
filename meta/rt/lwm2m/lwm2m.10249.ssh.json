@@ -1,0 +1,38 @@
+
+{
+  "title": "LWM2M SSH object (10249)",
+  "definitions": {
+    "rt": "oma.lwm2m.10249",
+    "type": "object",
+    "properties": [
+      {
+        "name": "0",
+        "type": "integer",
+        "readOnly": true,
+        "description": "SSH Status"
+      },
+      {
+        "name": "1",
+        "type": "integer",
+        "description": "SSH switch"
+      },
+      {
+        "name": "2",
+        "type": "integer",
+        "description": "SSH Turnel Port"
+      },
+      {
+        "name": "3",
+        "type": "integer",
+        "description": "SSH Server Port"
+      }
+    ]
+  },
+  "type": "object",
+  "required": [
+    "0",
+    "1",
+    "2",
+    "3"
+  ]
+}

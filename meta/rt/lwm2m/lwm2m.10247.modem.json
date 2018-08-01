@@ -1,0 +1,53 @@
+
+{
+  "title": "LWM2M modem object (10247)",
+  "definitions": {
+    "rt": "oma.lwm2m.10247",
+    "type": "object",
+    "properties": [
+      {
+        "name": "0",
+        "type": "integer",
+        "readOnly": true,
+        "description": "Cellular network Status"
+      },
+      {
+        "name": "1",
+        "type": "integer",
+        "description": "Cellular network connection"
+      },
+      {
+        "name": "2",
+        "type": "integer",
+        "description": "Cellular network autoconnection"
+      },
+      {
+        "name": "3",
+        "type": "string",
+        "description": "Cellular network provider"
+      },
+      {
+        "name": "4",
+        "type": "string",
+        "description": "Cellular modem provider"
+      },
+      {
+        "name": "5",
+        "type": "integer",
+        "description": "Cellular network in-connection duration"
+      },
+      {
+        "name": "6",
+        "type": "string",
+        "description": "Cellular network modem TTY device name"
+      }
+    ]
+  },
+  "type": "object",
+  "required": [
+    "0",
+    "1",
+    "2",
+    "3"
+  ]
+}

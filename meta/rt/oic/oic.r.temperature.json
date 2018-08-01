@@ -1,0 +1,28 @@
+{
+  "title": "Temperature",
+  "definitions": {
+    "rt": "oic.r.temperature",
+    "type": "object",
+    "properties": [
+      {
+        "name": "temperature",
+        "type": "float",
+        "description": "Current temperature setting or measurement"
+      },
+      {
+        "name": "units",
+        "enum": [
+          "C",
+          "F",
+          "K"
+        ],
+        "description": "Units for the temperature value",
+        "readOnly": true
+      }
+    ]
+  },
+  "type": "object",
+  "required": [
+    "temperature"
+  ]
+}

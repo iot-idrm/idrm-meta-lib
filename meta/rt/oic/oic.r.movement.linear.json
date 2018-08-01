@@ -1,0 +1,55 @@
+{
+  "title": "Open Level",
+  "definitions": {
+    "rt": "oic.r.openlevel",
+    "type": "object",
+    "properties": [
+      {
+		"name":"movement",
+		"description": "Current movement value",
+		"type": "string"
+		},
+		{
+		"name":"movementModifier",
+		"description": "Modifier to the movement value (e.g. spin-90, left-20), units are device dependent",
+		"type": "string"
+		},
+		{
+		"name":"movementSettings",
+		"description": "array of possible movement values",
+		"items": {
+		"type": "string"
+		},
+		"readOnly": true,
+		"type": "array"
+		},    
+		{
+		"name":"precision",
+		"description": "Accuracy granularity of the exposed value",
+		"readOnly": true,
+		"type": "number"
+		},
+		{
+		"name":"range",
+		"description": "The valid range for the value Property",
+		"items": {
+		"anyOf": [
+		{
+		"type": "number"
+		},
+		{
+		"type": "integer"
+		}
+		]
+		},
+		"maxItems": 2,
+		"minItems": 2,
+		"readOnly": true,
+		"type": "array"
+		}		
+	]
+  },
+  "required": [
+    "openLevel"
+  ]
+}

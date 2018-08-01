@@ -1,0 +1,18 @@
+{
+  "title": "PPM for CO2",
+  "definitions": {
+    "rt": "iconnect.r.air.CO2",
+    "type": "object",
+    "properties": [
+      {
+        "name": "value",
+        "type": "float",
+        "description": "the value measured for the air"
+      }
+    ]
+  },
+  "type": "object",
+  "required": [
+    "value"
+  ]
+}

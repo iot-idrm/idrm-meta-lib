@@ -1,0 +1,64 @@
+
+{
+  "title": "LWM2M Server Object (1)",
+  "definitions": {
+    "rt": "oma.lwm2m.1",
+    "type": "object",
+    "properties": [
+      {
+        "name": "0",
+        "type": "integer",
+        "readOnly": true,
+        "description": "Short Server ID"
+      },
+      {
+        "name": "1",
+        "type": "integer",
+        "description": "Lifetime"
+      },
+      {
+        "name": "2",
+        "type": "integer",
+        "description": "Default Minimum Period"
+      },
+      {
+        "name": "3",
+        "type": "integer",
+        "description": "Default Maximum Period"
+      },
+      {
+        "name": "4",
+        "type": "string",
+        "description": "Disable"
+      },
+      {
+        "name": "5",
+        "type": "integer",
+        "description": "Disable Timeout"
+      },
+      {
+        "name": "6",
+        "type": "boolean",
+        "description": "Notification  Storing When Disabled or Offline"
+      },
+      {
+        "name": "7",
+        "type": "string",
+        "description": "Binding"
+      },
+      {
+        "name": "8",
+        "type": "integer",
+        "description": "Registration Update Trigger"
+      }
+    ]
+  },
+  "type": "object",
+  "required": [
+    "0",
+    "1",
+    "6",
+    "7",
+    "8"
+  ]
+}

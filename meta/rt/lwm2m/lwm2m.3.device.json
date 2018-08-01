@@ -1,0 +1,132 @@
+
+{
+  "title": "LWM2M Device Object (3)",
+  "definitions": {
+    "rt": "oma.lwm2m.3",
+    "type": "object",
+    "properties": [
+      {
+        "name": "0",
+        "type": "string",
+        "readOnly": true,
+        "description": "Device Manufacture"
+      },
+      {
+        "name": "1",
+        "type": "string",
+        "description": "Model number"
+      },
+      {
+        "name": "2",
+        "type": "string",
+        "description": "Serial number"
+      },
+      {
+        "name": "3",
+        "type": "string",
+        "description": "Firmware version"
+      },
+      {
+        "name": "4",
+        "type": "string",
+        "description": "reboot"
+      },
+      {
+        "name": "5",
+        "type": "string",
+        "description": "Factory reset"
+      },
+      {
+        "name": "6",
+        "type": "integer",
+        "description": "Available Power Sources"
+      },
+      {
+        "name": "7",
+        "type": "integer",
+        "description": "Power Source Voltage"
+      },
+      {
+        "name": "8",
+        "type": "integer",
+        "description": "Power Source Current"
+      },
+      {
+        "name": "9",
+        "type": "integer",
+        "description": "Battery Level"
+      },
+      {
+        "name": "10",
+        "type": "integer",
+        "description": "Memory Free"
+      },
+      {
+        "name": "11",
+        "type": "integer",
+        "description": "Error Code"
+      },
+      {
+        "name": "12",
+        "type": "integer",
+        "description": "Reset Error Code"
+      },
+      {
+        "name": "13",
+        "type": "date",
+        "description": "Current Time"
+      },
+      {
+        "name": "14",
+        "type": "string",
+        "description": "UTC Offset"
+      },
+      {
+        "name": "15",
+        "type": "string",
+        "description": "Timezone"
+      },
+      {
+        "name": "16",
+        "type": "string",
+        "description": "Supported Binding and Modes"
+      },
+      {
+        "name": "17",
+        "type": "string",
+        "description": "Device Type"
+      },
+      {
+        "name": "18",
+        "type": "string",
+        "description": "Hardware Version"
+      },
+      {
+        "name": "19",
+        "type": "string",
+        "description": "Software Version"
+      },
+      {
+        "name": "20",
+        "type": "integer",
+        "description": "Battery Status"
+      },
+      {
+        "name": "21",
+        "type": "integer",
+        "description": "Memory Total"
+      },
+      {
+        "name": "22",
+        "type": "string",
+        "description": "ExtDevInfo"
+      }
+    ]
+  },
+  "type": "object",
+  "required": [
+    "4",
+    "11",
+    "16"
+  ]
+}

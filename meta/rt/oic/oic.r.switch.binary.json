@@ -1,0 +1,18 @@
+{
+  "title": "Binary Switch",
+  "definitions": {
+    "rt": "oic.r.switch.binary",
+    "type": "object",
+    "properties": [
+      {
+        "name": "value",
+        "type": "boolean",
+        "description": "Status of the switch"
+      }
+    ]
+  },
+  "type": "object",
+  "required": [
+    "value"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Open Level",
+  "definitions": {
+    "rt": "oic.r.openlevel",
+    "type": "object",
+    "properties": [
+      {
+        "name": "openLevel",
+        "type": "integer",
+        "description": "How open or ajar the entity is"
+      },
+      {
+        "name": "step",
+        "type": "integer",
+        "readOnly": true,
+        "description": "Step value across the defined range"
+      }
+    ]
+  },
+  "required": [
+    "openLevel"
+  ]
+}

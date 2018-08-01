@@ -1,0 +1,48 @@
+{
+  "title": "Electrical Energy",
+  "definitions": {
+    "rt": "oic.r.energy.electrical",
+    "type": "object",
+    "properties": [
+      {
+        "name": "voltage",
+        "type": "float",
+        "readOnly": true,
+        "description": "The electric voltage in Volts (V)."
+      },
+      {
+        "name": "desiredvoltage",
+        "type": "float",
+        "description": "The desired electric voltage in Volts (V)."
+      },
+      {
+        "name": "current",
+        "type": "float",
+        "readOnly": true,
+        "description": "The electric current in Amps (A)."
+      },
+      {
+        "name": "desiredcurrent",
+        "type": "float",
+        "description": "The desired electric current in Amps (A)."
+      },
+      {
+        "name": "frequency",
+        "type": "float",
+        "readOnly": true,
+        "description": "The electric frequency in Hertz (Hz)."
+      },
+      {
+        "name": "desiredfrequency",
+        "type": "float",
+        "description": "The desired electric frequency in Hertz (Hz)."
+      }
+    ]
+  },
+  "type": "object",
+  "required": [
+    "voltage",
+    "current",
+    "frequency"
+  ]
+}
