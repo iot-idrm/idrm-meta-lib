@@ -1,0 +1,76 @@
+{
+"model": "ZhiXing.Mushroom.18-07", 
+"display_name": "知行蘑菇设备套装18-07", 
+"interfaces": [
+	{ 
+        "id":1,
+        "protocol":["MODBUS"],
+	"type": "RS485", 
+	"shape": "CONNECTOR-12"
+        },
+	{ 
+        "id":2,
+        "protocol":["MODBUS_TCP"],
+	"type": "TCP" 
+	}],
+"devices":[{
+          "dt": "sensor.I.TuoAn",
+          "alias": "gw3-zhixing-di2",
+          "sid": 2
+        },
+       {
+          "dt": "sensor.EC.TuoAn",
+          "alias": "gw3-zhixing-di13",
+          "sid": 13
+        },
+       {
+          "dt": "sensor.H-T.TuoAn",
+          "alias": "gw3-zhixing-di1",
+          "sid": 1
+        },
+       {
+          "dt": "sensor.CO2.TuoAn",
+          "alias": "gw3-zhixing-di5",
+          "sid": 5
+        },
+       {
+          "dt": "sensor.H-T.TuRang.TuoAn",
+          "alias": "gw3-zhixing-di11",
+          "sid": 11
+        }
+],
+"groups": [              
+       {
+        "dss":
+	[{"name":"temperature",
+        "display_name":"温度",  
+	"property":{"di":"gw3-zhixing-di1", "res":"/t","pt":"temperature"} 
+	},
+        {"name":"temperature_turang",
+        "display_name":"土壤温度",  
+	"property":{"di":"gw3-zhixing-di11", "res":"/t","pt":"temperature"} 
+	},
+        {"name":"humidity",
+        "display_name":"湿度",
+	"property":{"di":"gw3-zhixing-di1", "res":"/h","pt":"humidity"}
+	},
+        {"name":"humidity_turang",
+        "display_name":"土壤湿度",
+	"property":{"di":"gw3-zhixing-di11", "res":"/h","pt":"humidity"} 
+	},
+        {"name":"CO2",
+        "display_name":"CO2", 
+	"property":{"di":"gw3-zhixing-di5", "res":"/data","pt":"value"} 
+	},
+        {"name":"light",
+        "display_name":"光照", 
+	"property":{"di":"gw3-zhixing-di2", "res":"/data","pt":"illuminance"} 
+	},
+        {"name":"ec",
+        "display_name":"导电率",
+	"property":{"di":"gw3-zhixing-di13", "res":"/data","pt":"conductivity"} 
+	}
+      ]
+  }]
+}
+
