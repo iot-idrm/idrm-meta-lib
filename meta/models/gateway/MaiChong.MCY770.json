@@ -1,0 +1,24 @@
+{
+"model": "MC.Y770",     
+"display":  "Touch Screen (8 inch)",
+"description": " MaiChong Gateway",
+"interfaces": [{ 
+"id": 1,
+"type": "RS485",  
+"protocol" : ["MODBUS"],
+"shape": "CONNECTOR-12",   
+"display_name": "RS485 Port",  
+"device_port": "/dev/ttyS3",  
+"speed":9600 
+},
+{
+"id": 2,
+"type": "TCP",
+"protocol": ["MODBUS_TCP"],
+"shape": "",
+"display_name": "TCP/IP"
+}
+],
+"net":["3G","wifi","ETH"]   
+}
+
