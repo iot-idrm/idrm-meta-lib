@@ -38,7 +38,7 @@
 	},
         {"name":"cooler",
         "display_name":"制冷",
-	"property":{"di":"g1-controller-T_HA-1", "res":"/on-off","pt":"current"} 
+	"property":{"di":"switch.jiekong.MBSL8DI4RO", "res":"/di/0","pt":"value"} 
 	}
       ]
   }]
