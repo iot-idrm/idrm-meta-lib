@@ -1,0 +1,32 @@
+
+{
+    "title": "LWM2M Current Object (3317)",
+    "definitions": {
+      "rt": "oma.lwm2m.3317",
+      "type": "object",
+      "properties": [
+        {
+          "name": "5700",
+          "type": "float",
+          "readOnly": true,
+          "description": "Sensor Value"
+        },
+        {
+          "name": "5601",
+          "type": "float",
+          "readOnly": true,
+          "description": "The minimum value measured by the sensor since power ON or reset"
+        },
+        {
+          "name": "5602",
+          "type": "float",
+          "readOnly": true,
+          "description": "The maximum value measured by the sensor since power ON or reset"
+        }
+      ]
+    },
+    "type": "object",
+    "required": [
+      "5700"
+    ]
+  }
