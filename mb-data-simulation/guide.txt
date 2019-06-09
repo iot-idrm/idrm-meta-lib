@@ -1,0 +1,44 @@
+文件格式说明
+
+
+{
+    "port": [5002],
+    "step": 0.5,            #增加的步长
+    "update_seconds": 6,    #更新的频率
+    "log_level": "warning", #LOG的级别  info|warning
+	
+     "config":[
+      {
+       "slave_ids":[1,2,3],                      #modbus slave id
+        "name":"COILS",                         #寄存器类型： 线圈
+       	"value":[
+        {"start": 0,    "num": 10},    #寄存器起始地址，总长度，取值范围（最低，最高）
+        {"start": 1001, "num": 10}
+        ]
+       },
+       {
+        "slave_ids":[4],
+        "name":"HOLDING_REGISTERS",               
+       	"value":[
+        {"start": 0,    "num": 1, "range": {"low":20.0, "high": 40.0}, "vt": "f", "c": "dcba", "curve": "sin"} 
+         #寄存器起始地址，  总长度，   取值范围（   最低，      最高         ）, 数据类型(f:float/i:int) 字节序类型    数据曲线(sin/random)
+        ]
+      }    
+    ]
+}     
+字段说明：     
+port: 侦听端口
+name: 寄存器类型，可是以下字符串：
+	COILS
+	DISCRETE_INPUTS
+	HOLDING_REGISTERS
+	ANALOG_INPUTS
+num: 数据点个数
+vt: f - 浮点类型，每个item占两个寄存器， i - 整数类型，每个item占一个寄存器
+c： 仅当浮点数据类型时需要，缺省使用abcd。
+	abcd
+	dcba
+	badc
+	cdab
+curve: 数据生成曲线，可以是：sin, random
+
