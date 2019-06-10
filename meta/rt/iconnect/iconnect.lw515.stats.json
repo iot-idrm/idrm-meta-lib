@@ -1,0 +1,27 @@
+{
+  "title": "Low power LoRA sensor hub LW515 statistics",
+  "definitions": {
+    "rt": "iconnect.lw515.stats",
+    "type": "object",
+    "properties": [
+      {
+        "name": "battery",
+        "type": "float",
+        "description": "the value measured for battery voltage"
+      },
+      {
+        "name": "drops",
+        "type": "int",
+        "description": "number of reports dropped"
+      },
+      {
+        "name": "expiries",
+        "type": "int",
+        "description": "the number of expired requests"
+      }
+    ]
+  },
+  "type": "object",
+  "required": [
+  ]
+}

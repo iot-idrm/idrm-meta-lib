@@ -1,1 +1,2 @@
-
+iconnect.lw515.stats: Low power LoRA sensor hub LW515 statistics
+iconnect.r.air.CO2: PPM for CO2
