@@ -1,0 +1,8 @@
+     {
+        "slave_ids":[3,7],
+        "name":"COILS",
+        "dt":"switch.jiekong.MBSL8DI4RO",
+        "value":[
+            {"start": 0,    "num": 4,"des":"oic.r.switch.binary"}
+        ]
+     },   

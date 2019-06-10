@@ -1,0 +1,8 @@
+     {
+        "slave_ids":[10,11],
+        "name":"ANALOG_INPUTS",
+        "dt":"sensor.CO2.TonyGreen",
+        "value":[
+            {"start": 0,    "num": 1, "range": {"low":200.0, "high": 8000.0}, "vt": "f", "c": "dcba", "curve": "sin", "des":"oic.r.temperature"}
+        ]
+     }

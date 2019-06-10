@@ -1,0 +1,8 @@
+     {
+        "slave_ids":[1,5],
+        "name":"HOLDING_REGISTERS",
+        "dt":"sensor.A.jla3C",
+        "value":[
+            {"start": 86,   "num": 1, "range": {"low":1000, "high": 10000}, "vt":"i", "curve": "increase","des":"oic.r.energy.electrical"}
+        ]
+     },
