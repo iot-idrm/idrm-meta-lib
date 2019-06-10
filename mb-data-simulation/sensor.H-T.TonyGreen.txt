@@ -1,0 +1,9 @@
+     {
+        "slave_ids":[2,6],
+        "name":"HOLDING_REGISTERS",
+        "dt":"sensor.H-T.TonyGreen",
+        "value":[
+            {"start": 0,    "num": 1, "range": {"low":0, "high": 100}, "vt": "f", "c":"dcba", "curve": "sin", "des":"oic.r.temperature"}   , 
+            {"start": 2,    "num": 1, "range": {"low":0, "high": 90}, "vt": "f", "c":"dcba", "curve": "sin", "des":"oic.r.humidity"}  
+        ]
+     },   

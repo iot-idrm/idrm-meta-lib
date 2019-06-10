@@ -1,0 +1,8 @@
+     {
+        "slave_ids":[1,2],
+        "name":"HOLDING_REGISTERS",
+        "dt":"control.T.DELTA.4848",
+        "value":[
+            {"start": 3840, "num": 1, "range": {"low":10, "high": 1000}, "vt":"i","curve": "sin","property":"pv"}
+        ]
+     },
