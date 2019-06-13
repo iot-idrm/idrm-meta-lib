@@ -11,7 +11,7 @@
       },
       {
         "name": "units",
-        "type": "string"
+        "type": "string",
         "description": "Units for the temperature value",
         "readOnly": true
       }

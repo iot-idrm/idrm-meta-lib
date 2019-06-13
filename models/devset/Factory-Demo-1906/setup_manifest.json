@@ -1,0 +1,50 @@
+{
+"model": "intel.factory.demo.1906", 
+"display_name": "现代化工厂监控演示", 
+"interfaces": [
+	{ 
+        "id":1,
+        "protocol":["MODBUS"],
+	"type": "RS485", 
+	"shape": "CONNECTOR-12"
+	}],
+"devices":[{"sid":6,"alias":"sensor-A", "dt":"sensor.A.jla3C"}, {"sid":2,"alias":"sensor-TH", "dt":"sensor.H-T.TonyGreen"}, {"sid":4,"alias":"controller-T", "dt":"control.T.DELTA.4848"}, {"sid":5,"alias":"sensor-CO2", "dt":"sensor.CO2.TonyGreen"}, {"sid":7,"alias":"sensor-light", "dt":"sensor.I.RS-GZ-N01"}, {"sid":9,"alias":"switch-io-1", "dt":"switch.jiekong.MBSL8DI4RO"}],
+"groups": [              
+       {
+        "dss":
+	[{"name":"temperature",
+        "display_name":"温度",  
+	"property":{"di":"sensor-TH", "res":"/t","pt":"temperature"} 
+	},
+	{"name":"tempControl",
+        "display_name":"控制器温度",  
+	"property":{"di":"controller-T", "res":"/controller","pt":"pv"} 
+	},
+        {"name":"CO2",
+        "display_name":"二氧化炭",  
+	"property":{"di":"sensor-CO2", "res":"/CO2","pt":"value"} 
+	},
+        {"name":"humidity",
+        "display_name":"湿度",
+	"property":{"di":"sensor-TH", "res":"/h","pt":"humidity"}
+	},
+        {"name":"targetTemp",
+        "display_name":"目标温度",
+	"property":{"di":"controller-T", "res":"/controller","pt":"sv"} 
+	},
+        {"name":"light",
+        "display_name":"光照", 
+	"property":{"di":"sensor-light", "res":"/i","pt":"illuminance"} 
+	},
+        {"name":"fan",
+        "display_name":"通风",
+	"property":{"di":"sensor-A", "res":"/a","pt":"current"} 
+	},
+        {"name":"cooler",
+        "display_name":"制冷",
+	"property":{"di":"switch-io-1", "res":"/di/0","pt":"value"} 
+	}
+      ]
+  }]
+}
+
