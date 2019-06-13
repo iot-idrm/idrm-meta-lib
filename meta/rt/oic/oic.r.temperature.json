@@ -11,11 +11,7 @@
       },
       {
         "name": "units",
-        "enum": [
-          "C",
-          "F",
-          "K"
-        ],
+        "type": "string"
         "description": "Units for the temperature value",
         "readOnly": true
       }
