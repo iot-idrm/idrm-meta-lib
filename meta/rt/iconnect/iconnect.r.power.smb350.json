@@ -1,0 +1,160 @@
+   [
+    {"definitions":
+    {
+        "description": "iconnect.r.power.smb350.common_voltage",
+        "rt": "iconnect.r.power.smb350.common_voltage",
+        "properties": [
+            {
+                "readOnly": false,
+                 "name": "phase_A",
+                 "type": "float"
+            },
+            {
+                "readOnly": false,
+                 "name": "phase_B",
+                 "type": "float"
+            },
+            {
+                "readOnly": false,
+                 "name": "phase_C",
+                 "type": "float"
+            },
+            {
+                "readOnly": false,
+                 "name": "line_A-B",
+                 "type": "float"
+            },
+            {
+                "readOnly": false,
+                 "name": "line-B-C",
+                 "type": "float"
+            },
+            {
+                "readOnly": false,
+                 "name": "line_C-A",
+                 "type": "float"
+            }
+        ]
+    },
+    "required": [
+        "phase_A", "phase_B", "phase_C"
+    ],
+    "type": "object"},
+ 
+    {"definitions":
+    {
+        "description": "iconnect.r.power.smb350.totals_and_averages",
+         "rt": "iconnect.r.power.smb350.totals_and_averages",
+        "properties": [
+            {
+                "readOnly": false,
+                 "name": "average_current",
+                 "type": "float"
+            },
+            {
+                "readOnly": false,
+                 "name": "total_power",
+                 "type": "float"
+            },
+            {
+                "readOnly": false,
+                 "name": "total_energy",
+                 "type": "float"
+            },
+            {
+                "readOnly": false,
+                 "name": "total_reactive_power",
+                 "type": "float"
+            },
+            {
+                "readOnly": false,
+                 "name": "total_reactive_energy",
+                 "type": "float"
+            },
+            {
+                "readOnly": false,
+                 "name": "total_apparent_power",
+                 "type": "float"
+            },
+            {
+                "readOnly": false,
+                 "name": "total_power_factor",
+                 "type": "float"
+            }
+        ]
+    },
+    "required": [
+        "average_current", "total_power", "total_reactive_power", "total_reactive_energy", "total_apparent_power", "total_power_factor"
+    ],
+    "type": "object"},
+
+
+    {"definitions":
+    {
+        "description": "iconnect.r.power.smb350.peak_totals",
+         "rt": "iconnect.r.power.smb350.peak_totals",
+        "properties": [
+            {
+                "readOnly": false,
+                 "name": "channel/0",
+                 "type": "float"
+            },
+            {
+                "readOnly": false,
+                 "name": "channel/1",
+                 "type": "float"
+            },
+            {
+                "readOnly": false,
+                 "name": "channel/2",
+                 "type": "float"
+            },
+            {
+                "readOnly": false,
+                 "name": "channel/3",
+                 "type": "float"
+            },
+            {
+                "readOnly": false,
+                 "name": "channel/4",
+                 "type": "float"
+            },
+            {
+                "readOnly": false,
+                 "name": "channel/5",
+                 "type": "float"
+            },
+            {
+                "readOnly": false,
+                 "name": "channel/6",
+                 "type": "float"
+            },
+            {
+                "readOnly": false,
+                 "name": "channel/7",
+                 "type": "float"
+            }
+        ]
+    },
+    "required": [
+        "channel/0"
+    ],
+    "type": "object"},
+    {"definitions":
+    {
+        "description": "iconnect.r.power.smb350.acdi.alarm",
+        "rt": "iconnect.r.power.smb350.acdi.alarm",
+        "properties": [
+            {
+                "readOnly": false,
+                 "name": "alarm",
+                 "type": "float"
+            }
+        ]
+    },
+    "required": [
+        "alarm"
+    ],
+    "type": "object"}  
+    ]
+

@@ -1,0 +1,28 @@
+{"definitions":
+    {
+        "description": "iconnect.r.power.ABC_phases",
+         "rt": "iconnect.r.power.ABC_phases",
+        "properties": [
+            {
+                "readOnly": false,
+                 "name": "phase_A",
+                 "type": "float"
+            },
+            {
+                "readOnly": false,
+                 "name": "phase_B",
+                 "type": "float"
+            },
+            {
+                "readOnly": false,
+                 "name": "phase_C",
+                 "type": "float"
+            }
+        ]
+    },
+    "required": [
+        "phase_A", "phase_B", "phase_C"
+    ],
+    "type": "object"
+}
+
