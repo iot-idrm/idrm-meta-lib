@@ -1,0 +1,16 @@
+{
+	"title": "liquid Level",
+	"definitions": {
+		"rt": "oic.r.liquid.level",
+		"type": "object",
+		"properties": [{
+			"name": "flow",
+			"type": "long",
+			"description": "Current water flow setting or measurement"
+		}]
+	},
+	"type": "object",
+	"required": [
+		"flow"
+	]
+}
