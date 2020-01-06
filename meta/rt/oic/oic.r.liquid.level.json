@@ -4,13 +4,22 @@
 		"rt": "oic.r.liquid.level",
 		"type": "object",
 		"properties": [{
-			"name": "flow",
-			"type": "long",
-			"description": "Current water flow setting or measurement"
+			"name": "currentlevel",
+			"type": "integer",
+			"readOnly": true,
+			"description": "The current level of the liquid in percentage"
+		}, {
+			"name": "value",
+			"type": "float",
+			"description": "The value sensed or actuated by this Resource"
+		}, {
+			"name": "desiredlevel",
+			"type": "integer",
+			"description": "The desired level of the liquid in percentage"
 		}]
 	},
 	"type": "object",
 	"required": [
-		"flow"
+		"value"
 	]
 }
