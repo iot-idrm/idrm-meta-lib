@@ -2,3 +2,4 @@ oic.r.energy.electrical.json
 oic.r.humidity.json
 oic.r.switch.binary.json
 oic.r.temperature.json
+oic.r.liquid.level.json
