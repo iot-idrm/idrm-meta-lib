@@ -1,0 +1,17 @@
+{
+  "title": "generic resource type with only property value",
+  "definitions": {
+    "rt": "iconnect.generic.01",
+    "type": "object",
+    "properties": [
+      {
+        "name": "value",
+        "type": "float",
+        "description": "value"
+      }
+    ]
+  },
+  "type": "object",
+  "required": [ "value"
+  ]
+}
