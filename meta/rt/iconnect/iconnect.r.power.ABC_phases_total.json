@@ -1,0 +1,33 @@
+{"definitions":
+    {
+        "description": "iconnect.r.power.ABC_phases_total",
+        "rt": "iconnect.r.power.ABC_phases_total",
+        "properties": [
+            {
+                "readOnly": false,
+                 "name": "phase_A",
+                 "type": "float"
+            },
+            {
+                "readOnly": false,
+                 "name": "phase_B",
+                 "type": "float"
+            },
+            {
+                "readOnly": false,
+                 "name": "phase_C",
+                 "type": "float"
+            },
+            {
+                "readOnly": false,
+                 "name": "total",
+                 "type": "float"
+            }
+        ]
+    },
+    "required": [
+        "phase_A", "phase_B", "phase_C"
+    ],
+    "type": "object"
+}
+
