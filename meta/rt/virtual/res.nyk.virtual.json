@@ -1,0 +1,17 @@
+{
+  "title": "virtual resource type with only property value",
+  "definitions": {
+    "rt": "res.nyk.virtual",
+    "type": "object",
+    "properties": [
+      {
+        "name": "value",
+        "type": "integer",
+        "description": "测试的数据，在电脑端模拟"
+      }
+    ]
+  },
+  "type": "object",
+  "required": [ "value"
+  ]
+}
