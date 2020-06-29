@@ -1,0 +1,24 @@
+{
+    "definitions": {
+        "rt": "oic.r.door",
+        "properties": [
+            {
+                "name": "openState",
+                "type": "string",
+                "description": "open state of the door",
+                "readOnly": true
+            },
+            {
+                "name": "openDuration",
+                "type": "float",
+                "description": "open duration",
+                "readOnly": true
+            }
+        ]
+    },
+    "required": [
+        "openState"
+    ],
+    "title": "elevator door",
+    "type": "object"
+}
