@@ -1,0 +1,56 @@
+{
+  "title": "rsource type for runtime active vm status",
+  "definitions": {
+    "rt": "wawesome.active_vm_status",
+    "type": "object",
+    "properties": [
+      {
+        "name": "active-app",
+        "type": "string",
+        "description": "active managed app name"
+      },
+      {
+        "name": "active-app-ver",
+        "type": "string",
+        "description": "version of active managed app software"
+      },
+      {
+        "name": "standby-app",
+        "type": "string",
+        "description": "standby managed app name"
+      },
+      {
+        "name": "standby-app-version",
+        "type": "string",
+        "description": "version of standby managed app"
+      },
+      {
+        "name": "status",
+        "type": "string",
+        "description": "available value: running , ready , debugging"
+      },
+      {
+        "name": "status-error",
+        "type": "string",
+        "description": "error description"
+      },
+      {
+        "name": "boot-time",
+        "type": "integer",
+        "description": "time in ms from 1970.1.1"
+      },
+      {
+        "name": "start_time",
+        "type": "integer",
+        "description": "time in ms from 1970.1.1"
+      },
+      {
+        "name": "stop-time",
+        "type": "integer",
+        "description": "time in ms from 1970.1.1"
+      }
+    ]
+  },
+  "type": "object",
+  "required": [  ]
+}
