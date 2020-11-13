@@ -1,0 +1,26 @@
+{
+  "title": "rsource type for runtime operation",
+  "definitions": {
+    "rt": "wawesome.operation",
+    "type": "object",
+    "properties": [
+      {
+        "name": "start",
+        "type": "integer",
+        "description": "write only"
+      },
+      {
+        "name": "stop",
+        "type": "integer",
+        "description": "write only"
+      },
+      {
+        "name": "swap-app",
+        "type": "integer",
+        "description": "write only"
+      }
+    ]
+  },
+  "type": "object",
+  "required": [ ]
+}

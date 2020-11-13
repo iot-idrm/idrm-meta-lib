@@ -1,0 +1,56 @@
+{
+  "title": "rsource type for runtime status",
+  "definitions": {
+    "rt": "wawesome.plc_status",
+    "type": "object",
+    "properties": [
+      {
+        "name": "name",
+        "type": "string",
+        "description": "name of runtime"
+      },
+      {
+        "name": "runtime",
+        "type": "string",
+        "description": "runtime software name"
+      },
+      {
+        "name": "runtime-ver",
+        "type": "string",
+        "description": "version of runtime software"
+      },
+      {
+        "name": "plc-application",
+        "type": "string",
+        "description": "managed app software name"
+      },
+      {
+        "name": "plc-app-version",
+        "type": "string",
+        "description": "version of managed app"
+      },
+      {
+        "name": "status",
+        "type": "string",
+        "description": "available value: running , ready , debugging"
+      },
+      {
+        "name": "boot-time",
+        "type": "integer",
+        "description": "time in ms from 1970.1.1"
+      },
+      {
+        "name": "start_time",
+        "type": "integer",
+        "description": "time in ms from 1970.1.1"
+      },
+      {
+        "name": "stop-time",
+        "type": "integer",
+        "description": "time in ms from 1970.1.1"
+      }
+    ]
+  },
+  "type": "object",
+  "required": [  ]
+}

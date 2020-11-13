@@ -1,0 +1,51 @@
+{
+  "title": "rsource type for runtime config",
+  "definitions": {
+    "rt": "wawesome.plc_config",
+    "type": "object",
+    "properties": [
+      {
+        "name": "name",
+        "type": "string",
+        "description": "name of runtime"
+      },
+      {
+        "name": "runtime",
+        "type": "string",
+        "description": "runtime software name"
+      },
+      {
+        "name": "runtime-version",
+        "type": "string",
+        "description": "version of runtime software"
+      },
+      {
+        "name": "app",
+        "type": "string",
+        "description": "managed app software name"
+      },
+      {
+        "name": "app-version",
+        "type": "string",
+        "description": "version of managed app"
+      },
+      {
+        "name": "local-standby",
+        "type": "boolean",
+        "description": "true if local standby runtime needed"
+      },
+      {
+        "name": "remote-standby",
+        "type": "boolean",
+        "description": "true if remote standby runtime needed"
+      },
+      {
+        "name": "auto-start",
+        "type": "boolean",
+        "description": "true if managed app is started automatically"
+      }
+    ]
+  },
+  "type": "object",
+  "required": [ ]
+}
