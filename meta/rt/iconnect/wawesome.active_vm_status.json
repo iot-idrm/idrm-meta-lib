@@ -1,11 +1,11 @@
 {
-  "title": "rsource type for runtime active vm status",
+  "title": "active plc status",
   "definitions": {
-    "rt": "wawesome.active_vm_status",
+    "rt": "wawesome.plc.vmstatus",
     "type": "object",
     "properties": [
       {
-        "name": "active-app",
+        "name": "active-app-name",
         "type": "string",
         "description": "active managed app name"
       },
@@ -15,7 +15,7 @@
         "description": "version of active managed app software"
       },
       {
-        "name": "standby-app",
+        "name": "standby-app-name",
         "type": "string",
         "description": "standby managed app name"
       },
@@ -30,9 +30,9 @@
         "description": "available value: running , ready , debugging"
       },
       {
-        "name": "status-error",
+        "name": "model",
         "type": "string",
-        "description": "error description"
+        "description": "model"
       },
       {
         "name": "boot-time",
