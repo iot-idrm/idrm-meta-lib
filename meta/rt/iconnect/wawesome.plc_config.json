@@ -1,7 +1,7 @@
 {
-  "title": "rsource type for runtime config",
+  "title": "config of plc",
   "definitions": {
-    "rt": "wawesome.plc_config",
+    "rt": "wawesome.plc.config",
     "type": "object",
     "properties": [
       {

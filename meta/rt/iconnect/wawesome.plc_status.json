@@ -1,7 +1,7 @@
 {
-  "title": "rsource type for runtime status",
+  "title": "status of plc",
   "definitions": {
-    "rt": "wawesome.plc_status",
+    "rt": "wawesome.plc.status",
     "type": "object",
     "properties": [
       {
@@ -20,34 +20,44 @@
         "description": "version of runtime software"
       },
       {
-        "name": "plc-application",
+        "name": "plc-app",
         "type": "string",
         "description": "managed app software name"
       },
       {
-        "name": "plc-app-version",
+        "name": "plc-app-ver",
         "type": "string",
         "description": "version of managed app"
       },
       {
-        "name": "status",
+        "name": "plc-status",
         "type": "string",
         "description": "available value: running , ready , debugging"
       },
       {
-        "name": "boot-time",
+        "name": "code",
         "type": "integer",
-        "description": "time in ms from 1970.1.1"
+        "description": "code"
       },
       {
-        "name": "start_time",
-        "type": "integer",
-        "description": "time in ms from 1970.1.1"
+        "name": "mgt-status",
+        "type": "string",
+        "description": "manage state"
       },
       {
-        "name": "stop-time",
+        "name": "mgt-error",
+        "type": "string",
+        "description": "manageerror"
+      },
+      {
+        "name": "swap-app-ready",
+        "type": "boolean",
+        "description": "true if ready to swap app"
+      },
+      {
+        "name": "mgt-status-enter-time",
         "type": "integer",
-        "description": "time in ms from 1970.1.1"
+        "description": "manage state enter time in ms from 1970.1.1"
       }
     ]
   },
