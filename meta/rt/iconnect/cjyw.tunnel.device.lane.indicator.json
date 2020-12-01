@@ -1,0 +1,41 @@
+{
+  "title": "lane indicator",
+  "definitions": {
+    "rt": "cjyw.tunnel.device.lane.indicator",
+    "type": "object",
+    "properties": [
+      {
+        "name": "green_red",
+        "type": "integer",
+        "description": "iread write"
+      },
+      {
+        "name": "red_green",
+        "type": "integer",
+        "description": "iread write"
+      },
+      {
+        "name": "red_red",
+        "type": "integer",
+        "description": "iread write"
+      },
+      {
+        "name": "green_green",
+        "type": "integer",
+        "description": "iread write"
+      },
+      {
+        "name": "left_red",
+        "type": "integer",
+        "description": "iread write"
+      },
+      {
+        "name": "red-left",
+        "type": "integer",
+        "description": "iread write"
+      }
+    ]
+  },
+  "type": "object",
+  "required": [ ]
+}
