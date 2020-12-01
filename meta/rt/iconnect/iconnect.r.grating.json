@@ -1,0 +1,36 @@
+{
+  "title": "grating",
+  "definitions": {
+    "rt": "iconnect.r.grating",
+    "type": "object",
+    "properties": [
+      {
+        "name": "number",
+        "type": "integer",
+        "description": "read"
+      },
+      {
+        "name": "gstatus",
+        "type": "integer",
+        "description": "read"
+      },
+      {
+        "name": "hstatus",
+        "type": "integer",
+        "description": "read"
+      },
+      {
+        "name": "command",
+        "type": "integer",
+        "description": "read"
+      },
+      {
+        "name": "temperature",
+        "type": "integer",
+        "description": "read"
+      }
+    ]
+  },
+  "type": "object",
+  "required": [ ]
+}

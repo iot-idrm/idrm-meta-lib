@@ -1,0 +1,21 @@
+{
+  "title": "radar channel",
+  "definitions": {
+    "rt": "iconnect.r.radar",
+    "type": "object",
+    "properties": [
+      {
+        "name": "average_speed",
+        "type": "integer",
+        "description": "read"
+      },
+      {
+        "name": "average_flow",
+        "type": "integer",
+        "description": "read"
+      }
+    ]
+  },
+  "type": "object",
+  "required": [ ]
+}

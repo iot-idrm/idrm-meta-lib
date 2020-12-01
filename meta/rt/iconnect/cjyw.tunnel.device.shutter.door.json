@@ -1,0 +1,16 @@
+{
+  "title": "shuttle door",
+  "definitions": {
+    "rt": "cjyw.tunnel.device.shutter.door",
+    "type": "object",
+    "properties": [
+      {
+        "name": "status",
+        "type": "integer",
+        "description": "iread write"
+      }
+    ]
+  },
+  "type": "object",
+  "required": [ ]
+}

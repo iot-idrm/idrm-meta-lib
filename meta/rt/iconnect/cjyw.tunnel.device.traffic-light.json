@@ -1,0 +1,16 @@
+{
+  "title": "traffic light",
+  "definitions": {
+    "rt": "cjyw.tunnel.device.traffic-light",
+    "type": "object",
+    "properties": [
+      {
+        "name": "status",
+        "type": "integer",
+        "description": "iread write"
+      }
+    ]
+  },
+  "type": "object",
+  "required": [ ]
+}
