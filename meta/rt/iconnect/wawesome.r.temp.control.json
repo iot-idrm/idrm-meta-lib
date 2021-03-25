@@ -1,0 +1,31 @@
+{
+  "title": "temp control",
+  "definitions": {
+    "rt": "modbus.Delta.T-Controller.4848",
+    "type": "object",
+    "properties": [
+      {
+        "name": "pv",
+        "type": "integer",
+        "description": "present value"
+      },
+      {
+        "name": "ct",
+        "type": "integer",
+        "description": "control time"
+      },
+      {
+        "name": "mode",
+        "type": "integer",
+        "description": "control mode"
+      },
+      {
+        "name": "sv",
+        "type": "integer",
+        "description": "set value"
+      }
+    ]
+  },
+  "type": "object",
+  "required": [ ]
+}
