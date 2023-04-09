@@ -47,9 +47,7 @@ modbus_meta主要的目的是定义如何将一种设备的MODBUS寄存器映形
          "p":[
             {
                "n":"temperature",
-               "fc":[
-                  3
-               ],
+               "reg_type":"Holding",
                "inst": 3,
                "multiplier":0.1,
                "deci": 5,
