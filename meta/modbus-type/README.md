@@ -26,18 +26,16 @@ modbus_meta主要的目的是定义如何将一种设备的MODBUS寄存器映形
    "write_multi_regs": true | false,
    "write_multi_coils" : true | false,
    "ping":{
-      "f":4,
-      "r":1,
-      "i":30
+      "fc":4,
+      "reg":1,
+      "seconds":30
    },
    "links":[
       {
          "href":"/t",
-         "rt":[
-            "oic.r.temperature"
-         ],
+         "rt":"oic.r.temperature",
+         "default_reg_type": "Input",
          "reg":{
-            reg_type: "Input",
             reg_num: 3,
             "addr":1,
          },
@@ -55,9 +53,8 @@ modbus_meta主要的目的是定义如何将一种设备的MODBUS寄存器映形
       },
       {
          "href":"/on-off",
-         "rt":[
-            "modbus.yitai.yt485"
-         ],
+         "rt":"modbus.yitai.yt485",
+         "default_reg_type": "Input",
          "properties":[
             {
                "name":"current",
@@ -73,9 +70,6 @@ modbus_meta主要的目的是定义如何将一种设备的MODBUS寄存器映形
    ]
 }
 ```
-
-
-
 - “**v**”: format version
 
 - “**dt**”: 此MODBUS设备类型名称
@@ -85,14 +79,14 @@ modbus_meta主要的目的是定义如何将一种设备的MODBUS寄存器映形
 -  **write_multi_regs**: 可选，是否支持fc 16，不提供则表示支持
 -  **write_multi_coils**: 可选，是否支持fc 15，不提供则表示支持
 
-
 - “links”
-
   - “**href**”为资源的URI. 
-  - “**rt**”为资源的类型名称。如果不是以“modbus.”开头，系统中必须已经创建该rt的类型定义。
+  - “**rt**”为资源的类型名称，可选。如果不是以“modbus.”开头，系统中必须已经创建该rt的类型定义。
     - rt字段如果不存在，则插件在上报RD消息中使用rt2，表示资源私有的类型定义。
+  - **default_reg_type**： 可选，本资源的缺省使用寄存器类型，如果属性中没有定义reg_type，则会使用此定义。 "Discrete" | "Coil" | "Input" | "Holding"。
+    - 在reg字段存在是必须提供。
+    - 如果属性和资源均没有提供reg type的描述，加载meta失败。
   - “**reg**”字段可选。表示整个资源可以通过一次性读取一整块寄存器来得到所有属性的数值。缺省方法是逐个属性读取寄存器。
-    - reg_type: 寄存器类型，
     - addr: 起始寄存器地址，
     - reg_num: 寄存器个数。
     - 注意：当 **instances**字段指示有多个资源实例时，这里a是第一个实例的起始地址，而rn表示单个资源实例占用的总寄存器个数（非所有实例总和）
@@ -101,33 +95,17 @@ modbus_meta主要的目的是定义如何将一种设备的MODBUS寄存器映形
   - “**properties**”字段描述该资源下所有的属性（数据点）
 
     - “**name**”: 属性名称。**注意：“name”的值不能随便自定义，必须是所在资源类型中（左边例子中则为oic.r.temperature）已经定义好的属性名称**。细节可参考后面说明。
-
-    - "**fc**": 支持的功能码
-
-    - "**multiplier**": 数值倍数, 可选项
-
+    - "**reg_type**": 寄存器类型: "Discrete" | "Coil" | "Input" | "Holding"
     - "**addr**": 寄存器地址
-
+    - “**offset**”: 该属性的寄存器在资源的整个寄存器块[reg]中的偏移量，有些设备只支持读整块寄存器，则只能使用此模式。
+      - “offset”和”addr”字段互斥，不能同时在一个属性中出现。
+      - 使用offset, 必须提供资源中的reg定义。
+    - "**coding**"：字节编码。当存在时并以i开始，当作4字节(双寄存器)整数处理，如果没有被解释成浮点类型。可选内容为：”abcd” | “dcba” | “badc” | “cdab | iabcd |..”
+    - "**multiplier**": 数值倍数, 可选项
+    - "**inst**": 属性的总个数，可选字段。如果有定义，每个属性实例为“{属性名}/{属性实例号}”，如"temp/1"。属性实例号从0开始增长
     - "**deci**": 查询是返回值小数点位数, 可选项
 
-      说明：下面是另外一个资源"current"描述从整个寄存器块中定义属性的寄存器地址的方法
-
-    - “**offset**”: 该属性的寄存器在资源的整个寄存器块(reg)中的偏移量，有些设备只支持读整块寄存器，则只能使用此模式。“offset”和”addr”字段互斥，不能同时在一个属性中出现。
-
-    - "**coding**"：字节编码。当存在时并以i开始，当作4字节(双寄存器)整数处理，如果没有被解释成浮点类型。可选内容为：”abcd” | “dcba” | “badc” | “cdab | iabcd |..”
-
     - "**vt**": 网关侧不使用。当rt类型以”modbus.”开头时必须提供，云端在自动生成对应的RT时需要此字段确定属性数据类型。其他情况下可不提供。属性数值类型表示. 其中i: 整数， f: 浮点， b：布尔类型，s: 字符串。
-
-    - "**inst**": 属性的总个数，可选字段。如果有定义，每个属性实例为“{属性名}/{属性实例号}”，如"temp/1"。属性实例号从0开始增长
-
-    - "**reg_type**": 寄存器类型: "Discrete" | "Coil" | "Input" | "Holding", 有reg_type字段时可以不用提供fc字段，未来打算逐步使用reg_type替代fc字段。
-
-
-## **寄存器个数限制**：
-
-·       对于coil类型功能码(1, 5)，每个属性寄存器个数是1。
-
-·       对于register类型功能码(3, 6, 4, 7)，如果定义了浮点数值类型(vt=”f”)，寄存器个数必须为2。其他情况下，可以是1个或者2个寄存器。
 
 
 
